@@ -113,9 +113,16 @@ const techStackImgs = [
 
 const techStackIcons = [
   {
-    name: "HTML",
-    modelPath: "/models/html5_logo.glb",
-    scale: 0.75,
+    name: "Tailwind css",
+    modelPath: "/models/3.glb",
+    scale: 1.5,
+    rotation: [0, 0, 0],
+    
+  },
+   {
+    name: "Django & drf",
+    modelPath: "/models/dj.glb",
+    scale: 4,
     rotation: [0, 0, 0],
     
   },
@@ -126,20 +133,27 @@ const techStackIcons = [
     rotation: [0, 0, 0],
     
   },
+   {
+    name: "Mongo DB",
+    modelPath: "/models/mongo.glb",
+    scale: 0.25,
+    rotation: [0, 0, 0],
+    
+  },
   {
-    name: "React Developer",
+    name: "React ",
     modelPath: "/models/react_logo-transformed.glb",
     scale: 1,
     rotation: [0, 0, 0],
   },
   {
-    name: "Python Developer",
+    name: "Python ",
     modelPath: "/models/python-transformed.glb",
     scale: 0.8,
     rotation: [0, 0, 0],
   },
   {
-    name: "Backend Developer",
+    name: "Node & Express",
     modelPath: "/models/node-transformed.glb",
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
