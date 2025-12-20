@@ -1,53 +1,68 @@
+import { useRef, memo } from "react";
 import AnimatedCounter from "../components/AnimatedCounter.jsx";
 import Button from "../components/Button.jsx";
 import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
-import { words } from "../constants/index.js";
+import { words } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const Hero = () => {
-  useGSAP(() => {
-    gsap.fromTo(
-      ".hero-text h1",
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
-    );
-  });
+  const heroTextRef = useRef(null);
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        heroTextRef.current.querySelectorAll("h1"),
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.2,
+          duration: 1,
+          ease: "power2.inOut",
+        }
+      );
+    },
+    { scope: heroTextRef }
+  );
 
   return (
     <section id="hero" className="relative overflow-hidden">
-      <div className="absolute top-0 left-0 z-10">
-        <img src="/images/bg.png" alt="" />
+      {/* Background */}
+      <div className="absolute top-0 left-0 z-10 pointer-events-none">
+        <img src="/images/bg.png" alt="" loading="lazy" />
       </div>
 
       <div className="hero-layout">
         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
           <div className="flex flex-col gap-7">
-            <div className="hero-text">
+            <div ref={heroTextRef} className="hero-text">
               <h1 className="general-sans font-[700] tracking-tight">
-
                 Shaping
                 <span className="slide">
                   <span className="wrapper">
-                    {words.map((words, index) => (
+                    {words.map(({ imgpath, text }, index) => (
                       <span
                         key={index}
                         className="flex items-center md:gap-3 gap-1 pb-2"
                       >
                         <img
-                          src={words.imgpath}
-                          alt="person"
+                          src={imgpath}
+                          alt=""
+                          loading="lazy"
                           className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
                         />
-                        <span>{words.text}</span>
+                        <span>{text}</span>
                       </span>
                     ))}
                   </span>
                 </span>
               </h1>
+
               <h1 className="general-sans font-[700] tracking-tight">
                 into Real Projects
               </h1>
+
               <h1 className="general-sans font-[700] tracking-tight">
                 that Deliver Results
               </h1>
@@ -66,15 +81,17 @@ const Hero = () => {
             />
           </div>
         </header>
+
         <figure>
           <div className="hero-3d-layout">
             <HeroExperience />
           </div>
         </figure>
       </div>
+
       <AnimatedCounter />
     </section>
   );
 };
 
-export default Hero;
+export default memo(Hero);
