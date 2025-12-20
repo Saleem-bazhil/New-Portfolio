@@ -1,5 +1,6 @@
 
 import * as THREE from "three";
+import { memo } from "react";
 
 const HeroLight = () => (
   <>
@@ -40,4 +41,4 @@ const HeroLight = () => (
   </>
 );
 
-export default HeroLight;
+export default memo(HeroLight);

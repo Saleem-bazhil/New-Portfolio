@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, memo } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -11,37 +11,41 @@ const AppShowcase = () => {
   const libraryRef = useRef(null);
   const ycDirectoryRef = useRef(null);
 
-  useGSAP(() => {
-    // Animation for the main section
-    gsap.fromTo(
-      sectionRef.current,
-      { opacity: 0 },
-      { opacity: 1, duration: 1.5 }
-    );
-
-    // Animations for each app showcase
-    const cards = [rydeRef.current, libraryRef.current, ycDirectoryRef.current];
-
-    cards.forEach((card, index) => {
+  useGSAP(
+    () => {
+      // Section fade-in
       gsap.fromTo(
-        card,
-        {
-          y: 50,
-          opacity: 0,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          delay: 0.3 * (index + 1),
-          scrollTrigger: {
-            trigger: card,
-            start: "top bottom-=100",
-          },
-        }
+        sectionRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 1.5 }
       );
-    });
-  }, []);
+
+      const cards = [
+        rydeRef.current,
+        libraryRef.current,
+        ycDirectoryRef.current,
+      ];
+
+      cards.forEach((card, index) => {
+        gsap.fromTo(
+          card,
+          { y: 50, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            delay: 0.3 * (index + 1),
+            scrollTrigger: {
+              trigger: card,
+              start: "top bottom-=100",
+              once: true, 
+            },
+          }
+        );
+      });
+    },
+    { scope: sectionRef } 
+  );
 
   return (
     <div id="work" ref={sectionRef} className="app-showcase">
@@ -49,39 +53,42 @@ const AppShowcase = () => {
         <div className="showcaselayout">
           <div ref={rydeRef} className="first-project-wrapper">
             <div className="image-wrapper">
-              <img src="/images/edutech.png" alt="Ryde App Interface" />
+              <img
+                src="/images/edutech.png"
+                alt="Ryde App Interface"
+                loading="lazy"
+              />
             </div>
             <div className="text-content">
               <h2>
                 A full-stack AI web application providing real time answers via
                 a fast, modern chat interface.
               </h2>
-<p className="text-white-50 md:text-xl flex flex-wrap items-center gap-4 general-sans">
-  <span>
-    Built with React, FastAPI, Python, PostgreSQL & Tailwind CSS.
-  </span>
+              <p className="text-white-50 md:text-xl flex flex-wrap items-center gap-4 general-sans">
+                <span>
+                  Built with React, FastAPI, Python, PostgreSQL & Tailwind CSS.
+                </span>
 
-  <a
-    href="https://edutech.bazhilgroups.in/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="px-4 py-1.5 rounded-md bg-white text-black text-sm font-semibold 
-               hover:bg-black-50 hover:text-white transition-all duration-300"
-  >
-    Live Demo
-  </a>
+                <a
+                  href="https://edutech.bazhilgroups.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-1.5 rounded-md bg-white text-black text-sm font-semibold 
+                  hover:bg-black-50 hover:text-white transition-all duration-300"
+                >
+                  Live Demo
+                </a>
 
-  <a
-    href="https://github.com/your-repo"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="px-4 py-1.5 rounded-md border border-white-50 text-white text-sm font-semibold 
-               hover:bg-white hover:text-black transition-all duration-300"
-  >
-    GitHub
-  </a>
-</p>
-
+                <a
+                  href="https://github.com/your-repo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-1.5 rounded-md border border-white-50 text-white text-sm font-semibold 
+                  hover:bg-white hover:text-black transition-all duration-300"
+                >
+                  GitHub
+                </a>
+              </p>
             </div>
           </div>
 
@@ -91,6 +98,7 @@ const AppShowcase = () => {
                 <img
                   src="/images/project2.png"
                   alt="Library Management Platform"
+                  loading="lazy"
                 />
               </div>
               <h2>The Library Management Platform</h2>
@@ -98,7 +106,11 @@ const AppShowcase = () => {
 
             <div className="project" ref={ycDirectoryRef}>
               <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/project3.png" alt="YC Directory App" />
+                <img
+                  src="/images/project3.png"
+                  alt="YC Directory App"
+                  loading="lazy"
+                />
               </div>
               <h2>YC Directory - A Startup Showcase App</h2>
             </div>
@@ -109,4 +121,4 @@ const AppShowcase = () => {
   );
 };
 
-export default AppShowcase;
+export default memo(AppShowcase);

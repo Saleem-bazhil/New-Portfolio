@@ -1,30 +1,36 @@
+import { Suspense, lazy } from "react";
+import "./App.css";
 
-import './App.css'
-import Comments from './sections/Comments'
-import Contact from './sections/Contact'
-import ExperienceSection from './sections/ExperienceSection'
-import FeatureCards from './sections/FeatureCards'
-import Footer from './sections/Footer'
-import Hero from './sections/Hero'
-import NavBar from './sections/NavBar'
-import ShowCaseSection from './sections/ShowCaseSection'
-import TechStack from './sections/TechStack'
+import NavBar from "./sections/NavBar";
+import Hero from "./sections/Hero";
+
+const ShowCaseSection = lazy(() => import("./sections/ShowCaseSection"));
+const FeatureCards = lazy(() => import("./sections/FeatureCards"));
+const ExperienceSection = lazy(() => import("./sections/ExperienceSection"));
+const TechStack = lazy(() => import("./sections/TechStack"));
+const Comments = lazy(() => import("./sections/Comments"));
+const Contact = lazy(() => import("./sections/Contact"));
+const Footer = lazy(() => import("./sections/Footer"));
 
 function App() {
-
   return (
     <>
-    <NavBar/>
-    <Hero/>
-    <ShowCaseSection/>
-    <FeatureCards/>
-    <ExperienceSection/>
-    <TechStack/>
-    <Comments/>
-    <Contact/>
-    <Footer/>
+      {/* Always visible */}
+      <NavBar />
+      <Hero />
+
+      {/* Lazy sections */}
+      <Suspense fallback={null}>
+        <ShowCaseSection />
+        <FeatureCards />
+        <ExperienceSection />
+        <TechStack />
+        <Comments />
+        <Contact />
+        <Footer />
+      </Suspense>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

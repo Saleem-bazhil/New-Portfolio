@@ -1,4 +1,4 @@
-import { useRef, useMemo } from "react";
+import { useRef, useMemo ,memo} from "react";
 import { useFrame } from "@react-three/fiber";
 
 const Particles = ({ count = 200 }) => {
@@ -58,4 +58,4 @@ const Particles = ({ count = 200 }) => {
   );
 };
 
-export default Particles;
+export default memo( Particles);

@@ -3,7 +3,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 
 import Computer from "./Computer";
-
+import { memo } from "react";
 const ContactExperience = () => {
   return (
     <Canvas shadows camera={{ position: [0, 3, 7], fov: 45 }}>
@@ -42,4 +42,4 @@ const ContactExperience = () => {
   );
 };
 
-export default ContactExperience;
+export default memo(ContactExperience);

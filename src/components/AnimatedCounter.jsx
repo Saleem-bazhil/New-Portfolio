@@ -1,5 +1,5 @@
 
-import { useRef } from "react";
+import { useRef ,memo } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
@@ -58,4 +58,4 @@ const AnimatedCounter = () => {
   );
 };
 
-export default AnimatedCounter;
+export default memo(AnimatedCounter);
