@@ -51,7 +51,7 @@ function LogoLoopMain() {
         logoHeight={64}
         gap={72}
         pauseOnHover
-        scaleOnHover={false}
+        scaleOnHover={true}
         ariaLabel="Tools and technologies I use"
       />
     </div>

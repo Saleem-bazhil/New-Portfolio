@@ -232,7 +232,7 @@ export const LogoLoop = memo(
       () =>
         cx(
           'relative group',
-          isVertical ? 'overflow-hidden h-full inline-block' : 'overflow-x-hidden',
+          isVertical ? 'overflow-hidden h-full inline-block' : (scaleOnHover ? 'overflow-visible' : 'overflow-x-hidden'),
           '[--logoloop-gap:32px]',
           '[--logoloop-logoHeight:28px]',
           '[--logoloop-fadeColorAuto:#ffffff]',
