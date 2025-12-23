@@ -112,13 +112,13 @@ const techStackImgs = [
 ];
 
 const techStackIcons = [
-  {
-    name: "Tailwind css",
-    modelPath: "/models/3.glb",
-    scale: 1.5,
-    rotation: [0, 0, 0],
+  // {
+  //   name: "Tailwind css",
+  //   modelPath: "/models/3.glb",
+  //   scale: 1.5,
+  //   rotation: [0, 0, 0],
     
-  },
+  // },
    {
     name: "Django & drf",
     modelPath: "/models/dj.glb",
@@ -133,13 +133,13 @@ const techStackIcons = [
     rotation: [0, 0, 0],
     
   },
-   {
-    name: "Mongo DB",
-    modelPath: "/models/mongo.glb",
-    scale: 0.25,
-    rotation: [0, 0, 0],
+  //  {
+  //   name: "Mongo DB",
+  //   modelPath: "/models/mongo.glb",
+  //   scale: 0.25,
+  //   rotation: [0, 0, 0],
     
-  },
+  // },
   {
     name: "React ",
     modelPath: "/models/react_logo-transformed.glb",
@@ -158,18 +158,18 @@ const techStackIcons = [
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
   },
-  {
-    name: "Interactive Developer",
-    modelPath: "/models/three.js-transformed.glb",
-    scale: 0.05,
-    rotation: [0, 0, 0],
-  },
-  {
-    name: "Project Manager",
-    modelPath: "/models/git-svg-transformed.glb",
-    scale: 0.05,
-    rotation: [0, -Math.PI / 4, 0],
-  },
+  // {
+  //   name: "Interactive Developer",
+  //   modelPath: "/models/three.js-transformed.glb",
+  //   scale: 0.05,
+  //   rotation: [0, 0, 0],
+  // },
+  // {
+  //   name: "Project Manager",
+  //   modelPath: "/models/git-svg-transformed.glb",
+  //   scale: 0.05,
+  //   rotation: [0, -Math.PI / 4, 0],
+  // },
   
 ];
 
