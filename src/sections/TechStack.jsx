@@ -1,16 +1,17 @@
-  import { useGSAP } from "@gsap/react";
-  import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
-  import TitleHeader from "../components/TitleHeader";
-  import TechIcon from "../components/TechModels/TechIcon";
-  import { techStackIcons } from "../constants";
-  import { memo } from "react";
-  import { useRef } from "react";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
+import TitleHeader from "../components/TitleHeader";
+import TechIcon from "../components/TechModels/TechIcon";
+import { techStackIcons } from "../constants";
+import { memo } from "react";
+import { useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import LogoLoopMain from "../components/TechModels/LogoLoopMain";
 
 gsap.registerPlugin(ScrollTrigger);
-  // import { techStackImgs } from "../constants";
-  
+// import { techStackImgs } from "../constants";
+
 const TechStack = () => {
   const sectionRef = useRef(null);
   useGSAP(
@@ -88,6 +89,12 @@ const TechStack = () => {
               </div>
             </div>
           ))} */}
+        </div>
+        <div className="mt-32 xl:mt-40 w-full flex flex-col items-center overflow-hidden">
+          <h6 className="mb-12 text-white-50 text-xs tracking-[0.35em] inter font-bold">
+            TOOLS & TECHNOLOGIES I USE
+          </h6>
+          <LogoLoopMain />
         </div>
       </div>
     </div>

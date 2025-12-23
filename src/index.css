@@ -328,6 +328,36 @@ section {
   }
 }
 
+
+.logo-pill {
+  position: relative;
+  flex-shrink: 0;
+
+  width: 96px;
+  height: 96px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(16px);
+
+  transition: transform 0.3s ease;
+}
+
+.logo-pill:hover {
+  transform: scale(1.08); /* SAFE hover scale */
+}
+
+.logo-pill svg {
+  font-size: 48px; /* 🔥 real icon size */
+}
+
+
+
 /* Hero text slider starts */
 .slide {
   display: inline-block;
