@@ -1,4 +1,5 @@
 import LogoLoop from "./LogoLoop";
+import { memo, useMemo } from "react";
 import {
   SiHtml5,
   SiCss3,
@@ -30,23 +31,28 @@ const techLogos = [
 ];
 
 function LogoLoopMain() {
-  return (
-  <div className="w-full max-w-6xl mx-auto py-10 overflow-hidden relative">
+  const logos = useMemo(
+    () =>
+      techLogos.map(({ icon: Icon, color, title }) => ({
+        title,
+        node: (
+          <div
+            className="logo-pill"
+            title={title}
+            style={{ "--glow-color": color }}
+          >
+            <Icon style={{ color }} />
+          </div>
+        ),
+      })),
+    []
+  );
 
+  return (
+    <div className="w-full max-w-6xl mx-auto py-10 overflow-hidden relative">
       <LogoLoop
-        logos={techLogos.map(({ icon: Icon, color, title }) => ({
-          title,
-          node: (
-            <div
-              className="logo-pill"
-              title={title}
-              style={{ "--glow-color": color }}
-            >
-              <Icon style={{ color }} />
-            </div>
-          ),
-        }))}
-        speed={24}         
+        logos={logos}
+        speed={24}
         direction="left"
         logoHeight={64}
         gap={72}
@@ -58,4 +64,4 @@ function LogoLoopMain() {
   );
 }
 
-export default LogoLoopMain;
+export default memo(LogoLoopMain);
