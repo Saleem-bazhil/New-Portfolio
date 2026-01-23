@@ -2,6 +2,21 @@ import { Environment, Float, OrbitControls, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useEffect, useState, useMemo, memo } from "react";
 import * as THREE from "three";
+import {
+  SiDjango,
+  SiJavascript,
+  SiReact,
+  SiPython,
+  SiNodedotjs,
+} from "react-icons/si";
+
+const LOGO_ICONS = {
+  "Django & drf": { Icon: SiDjango, color: "#092E20" },
+  JavaScript: { Icon: SiJavascript, color: "#F7DF1E" },
+  "React ": { Icon: SiReact, color: "#61DAFB" },
+  Python: { Icon: SiPython, color: "#3776AB" },
+  "Node & Express": { Icon: SiNodedotjs, color: "#68A063" },
+};
 
 const TechIcon = memo(({ model }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -26,26 +41,19 @@ const TechIcon = memo(({ model }) => {
     }
   }, [scene, model.name]);
 
-  const imageSrc = useMemo(() => {
-    const imageMap = {
-      "Django & drf": "/images/logos/python.svg",
-      JavaScript: "/images/logos/javascript.png",
-      React: "/images/logos/react.png",
-      Python: "/images/logos/python.svg",
-      "Node & Express": "/images/logos/node.png",
-    };
-    return imageMap[model.name] || "/images/logos/git.svg";
+  const logoData = useMemo(() => {
+    return LOGO_ICONS[model.name] || { Icon: SiPython, color: "#3776AB" };
   }, [model.name]);
 
-
   if (isMobile) {
+    const { Icon, color } = logoData;
     return (
       <div className="flex items-center justify-center h-full">
-        <img
-          src={imageSrc}
-          alt={model.name}
-          className="w-16 h-16 object-contain"
-          loading="lazy"
+        <Icon
+          size={80}
+          color={color}
+          className="drop-shadow-lg"
+          style={{ filter: "drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))" }}
         />
       </div>
     );
