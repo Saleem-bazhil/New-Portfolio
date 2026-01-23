@@ -1,9 +1,10 @@
-import { useRef, useState } from "react";
+import { useRef, useState, memo, useCallback } from "react";
 import emailjs from "@emailjs/browser";
 
 import TitleHeader from "../components/TitleHeader";
 import ContactExperience from "../components/ContactModels/ContactExperience";
-const Contact = () => {
+
+const Contact = memo(() => {
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
@@ -12,31 +13,30 @@ const Contact = () => {
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = useCallback((e) => {
     const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
-  };
+    setForm((prevForm) => ({ ...prevForm, [name]: value }));
+  }, []);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
-    setLoading(true); 
+    setLoading(true);
 
     try {
       await emailjs.sendForm(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
       );
 
-      // Reset form and stop loading
       setForm({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error("EmailJS Error:", error); 
+      console.error("EmailJS Error:", error);
     } finally {
-      setLoading(false); 
+      setLoading(false);
     }
-  };
+  }, []);
 
   return (
     <section id="contact" className="flex-center section-padding">
@@ -99,7 +99,11 @@ const Contact = () => {
                       {loading ? "Sending..." : "Send Message"}
                     </p>
                     <div className="arrow-wrapper">
-                      <img src="/images/arrow-down.svg" alt="arrow" />
+                      <img
+                        src="/images/arrow-down.svg"
+                        alt="arrow"
+                        loading="lazy"
+                      />
                     </div>
                   </div>
                 </button>
@@ -115,6 +119,8 @@ const Contact = () => {
       </div>
     </section>
   );
-};
+});
+
+Contact.displayName = "Contact";
 
 export default Contact;

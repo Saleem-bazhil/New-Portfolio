@@ -1,7 +1,9 @@
-
+import { memo } from "react";
 import { socialImgs } from "../constants";
 
-const Footer = () => {
+const Footer = memo(() => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -11,18 +13,20 @@ const Footer = () => {
         <div className="socials">
           {socialImgs.map((socialImg, index) => (
             <div key={index} className="icon">
-              <img src={socialImg.imgPath} alt="social icon" />
+              <img src={socialImg.imgPath} alt="social icon" loading="lazy" />
             </div>
           ))}
         </div>
         <div className="flex flex-col justify-center">
           <p className="text-center md:text-end">
-            © {new Date().getFullYear()} Saleem Bazhil . All rights reserved.
+            © {currentYear} Saleem Bazhil . All rights reserved.
           </p>
         </div>
       </div>
     </footer>
   );
-};
+});
+
+Footer.displayName = "Footer";
 
 export default Footer;

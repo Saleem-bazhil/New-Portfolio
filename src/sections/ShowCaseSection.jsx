@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const AppShowcase = () => {
+const AppShowcase = memo(() => {
   const sectionRef = useRef(null);
   const rydeRef = useRef(null);
   const libraryRef = useRef(null);
@@ -13,11 +13,10 @@ const AppShowcase = () => {
 
   useGSAP(
     () => {
-      // Section fade-in
       gsap.fromTo(
         sectionRef.current,
         { opacity: 0 },
-        { opacity: 1, duration: 1.5 }
+        { opacity: 1, duration: 1.5 },
       );
 
       const cards = [
@@ -38,13 +37,13 @@ const AppShowcase = () => {
             scrollTrigger: {
               trigger: card,
               start: "top bottom-=100",
-              once: true, 
+              once: true,
             },
-          }
+          },
         );
       });
     },
-    { scope: sectionRef } 
+    { scope: sectionRef },
   );
 
   return (
@@ -119,6 +118,8 @@ const AppShowcase = () => {
       </div>
     </div>
   );
-};
+});
 
-export default memo(AppShowcase);
+AppShowcase.displayName = "AppShowcase";
+
+export default AppShowcase;

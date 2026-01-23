@@ -1,4 +1,6 @@
-const TitleHeader = ({ title, sub }) => {
+import { memo } from "react";
+
+const TitleHeader = memo(({ title, sub }) => {
   return (
     <div className="flex flex-col items-center gap-5">
       <div className="hero-badge">
@@ -11,6 +13,8 @@ const TitleHeader = ({ title, sub }) => {
       </div>
     </div>
   );
-};
+});
+
+TitleHeader.displayName = "TitleHeader";
 
 export default TitleHeader;

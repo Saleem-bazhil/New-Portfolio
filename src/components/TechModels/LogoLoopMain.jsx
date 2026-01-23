@@ -15,7 +15,7 @@ import {
   SiGit,
 } from "react-icons/si";
 
-const techLogos = [
+const TECH_LOGOS = [
   { icon: SiHtml5, color: "#E34F26", title: "HTML5" },
   { icon: SiCss3, color: "#1572B6", title: "CSS3" },
   { icon: SiJavascript, color: "#F7DF1E", title: "JavaScript" },
@@ -33,7 +33,7 @@ const techLogos = [
 function LogoLoopMain() {
   const logos = useMemo(
     () =>
-      techLogos.map(({ icon: Icon, color, title }) => ({
+      TECH_LOGOS.map(({ icon: Icon, color, title }) => ({
         title,
         node: (
           <div
@@ -45,7 +45,7 @@ function LogoLoopMain() {
           </div>
         ),
       })),
-    []
+    [],
   );
 
   return (
