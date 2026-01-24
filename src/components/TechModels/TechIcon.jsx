@@ -14,7 +14,7 @@ const LOGO_ICONS = {
   "Django & drf": { Icon: SiDjango, color: "#092E20" },
   JavaScript: { Icon: SiJavascript, color: "#F7DF1E" },
   "React ": { Icon: SiReact, color: "#61DAFB" },
-  Python: { Icon: SiPython, color: "#3776AB" },
+  Python: { Icon: SiPython, color: "#3776AB" }, 
   "Node & Express": { Icon: SiNodedotjs, color: "#68A063" },
 };
 
