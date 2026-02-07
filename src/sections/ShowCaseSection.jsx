@@ -54,7 +54,7 @@ const AppShowcase = memo(() => {
             <div className="image-wrapper">
               <img
                 src="/images/edutech.png"
-                alt="Ryde App Interface"
+                alt="EduTech - ai chat application"
                 loading="lazy"
               />
             </div>

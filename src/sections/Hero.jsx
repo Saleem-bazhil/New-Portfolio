@@ -30,7 +30,7 @@ const Hero = () => {
     <section id="hero" className="relative overflow-hidden">
       {/* Background */}
       <div className="absolute top-0 left-0 z-10 pointer-events-none">
-        <img src="/images/bg.png" alt="" loading="lazy" />
+        <img src="/images/bg.png" alt="background-img" loading="lazy" />
       </div>
 
       <div className="hero-layout">
@@ -48,7 +48,7 @@ const Hero = () => {
                       >
                         <img
                           src={imgpath}
-                          alt=""
+                          alt={text}
                           loading="lazy"
                           className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
                         />

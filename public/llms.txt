@@ -1,0 +1,19 @@
+# llms.txt
+
+Site-Name: Saleem Bazhil Portfolio
+Site-URL: https://www.bazhilgroups.in
+
+Purpose:
+This website serves as the professional portfolio for Saleem Bazhil, a Python Full Stack Developer. It showcases web development projects, technical skills (React, Python, FastAPI), work experience, and contact information for potential clients or employers.
+
+Important-Pages:
+https://www.bazhilgroups.in/
+https://www.bazhilgroups.in/#projects
+https://www.bazhilgroups.in/#about
+https://www.bazhilgroups.in/#contact
+
+Sitemap:
+https://www.bazhilgroups.in/sitemap.xml
+
+Contact:
+https://www.bazhilgroups.in/#contact
