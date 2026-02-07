@@ -59,13 +59,13 @@ const Hero = () => {
                 </span>
               </h1>
 
-              <h1 className="general-sans font-[700] tracking-tight">
+              <div className="general-sans font-[700] tracking-tight">
                 into Real Projects
-              </h1>
+              </div>
 
-              <h1 className="general-sans font-[700] tracking-tight">
+              <div className="general-sans font-[700] tracking-tight">
                 that Deliver Results
-              </h1>
+              </div>
             </div>
 
             <p className="max-w-xl text-white-50 md:text-xl relative z-10 pointer-events-none general-sans leading-relaxed">
