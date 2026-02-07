@@ -71,7 +71,7 @@ const Hero = () => {
             <p className="max-w-xl text-white-50 md:text-xl relative z-10 pointer-events-none general-sans leading-relaxed">
               Hi, I’m Saleem Bazhil Python Full Stack Developer focused on building
               modern, high-performance web applications with clean code and
-              engaging user experiences.
+              engaging user experiences .
             </p>
 
             <Button
