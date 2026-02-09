@@ -11,10 +11,18 @@ const TechStack = lazy(() => import("./sections/TechStack"));
 const Comments = lazy(() => import("./sections/Comments"));
 const Contact = lazy(() => import("./sections/Contact"));
 const Footer = lazy(() => import("./sections/Footer"));
+import { Helmet } from "react-helmet";
 
 function App() {
   return (
     <>
+     <Helmet>
+        <title>Saleem Bazhil | Aspiring full stack web & mobile developer </title>
+        <meta
+          name="description"
+          content="Saleem Bazhil | Python Full Stack Web & Mobile Developer. Expert in React Native, Django & FastAPI. Building high-performance apps & solutions."
+        />
+      </Helmet>
       {/* Always visible */}
       <NavBar />
       <Hero />
