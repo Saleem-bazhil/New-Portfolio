@@ -11,7 +11,7 @@ const TechStack = lazy(() => import("./sections/TechStack"));
 const Comments = lazy(() => import("./sections/Comments"));
 const Contact = lazy(() => import("./sections/Contact"));
 const Footer = lazy(() => import("./sections/Footer"));
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 function App() {
   return (
