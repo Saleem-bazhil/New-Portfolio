@@ -20,7 +20,7 @@ function App() {
         <title>Saleem Bazhil | Aspiring full stack web & mobile developer </title>
         <meta
           name="description"
-          content="Saleem Bazhil | Python Full Stack Web & Mobile Developer. Expert in React Native, Django & FastAPI. Building high-performance apps & solutions."
+          content="Saleem Bazhil | Python Full Stack Web & Mobile Developer. Expert in React Native, Node.js, Express, Django & FastAPI. Building high-performance apps & solutions."
         />
       </Helmet>
       {/* Always visible */}
