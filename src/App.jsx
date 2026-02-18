@@ -1,40 +1,27 @@
 import { Suspense, lazy } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 
 import NavBar from "./sections/NavBar";
-import Hero from "./sections/Hero";
 
-const ShowCaseSection = lazy(() => import("./sections/ShowCaseSection"));
-const FeatureCards = lazy(() => import("./sections/FeatureCards"));
-const ExperienceSection = lazy(() => import("./sections/ExperienceSection"));
-const TechStack = lazy(() => import("./sections/TechStack"));
-const Comments = lazy(() => import("./sections/Comments"));
-const Contact = lazy(() => import("./sections/Contact"));
+const Home = lazy(() => import("./pages/Home"));
+const Projects = lazy(() => import("./pages/Projects"));
+const ProjectFDetail = lazy(() => import("./pages/ProjectFDetail"));
 const Footer = lazy(() => import("./sections/Footer"));
-import { Helmet } from "react-helmet-async";
 
 function App() {
+  const location = useLocation();
+  const isProjectPage = location.pathname.startsWith("/projects");
+
   return (
     <>
-     <Helmet>
-        <title>Saleem Bazhil | Aspiring full stack web & mobile developer </title>
-        <meta
-          name="description"
-          content="Saleem Bazhil | Python Full Stack Web & Mobile Developer. Expert in React Native, Node.js, Express, Django & FastAPI. Building high-performance apps & solutions."
-        />
-      </Helmet>
-      {/* Always visible */}
-      <NavBar />
-      <Hero />
-
-      {/* Lazy sections */}
+      {!isProjectPage && <NavBar />}
       <Suspense fallback={null}>
-        <ShowCaseSection />
-        <FeatureCards />
-        <ExperienceSection />
-        <TechStack />
-        <Comments />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:slug" element={<ProjectFDetail />} />
+        </Routes>
         <Footer />
       </Suspense>
     </>
