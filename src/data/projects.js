@@ -872,6 +872,101 @@ const projects = [
       "Handling noisy or poorly drawn digits and improving prediction accuracy through normalization and preprocessing techniques."
   }
 },
+{
+  id: 11,
+  slug: "student-performance-analysis-dashboard",
+  title: "Student Performance Analysis Dashboard",
+  description:
+    "Interactive data analytics dashboard for analyzing student performance using real-time CSV uploads and visual insights.",
+  tagline:
+    "Data-driven student performance analysis with interactive visualizations.",
+  image: "/images/student-analysis.png",
+  category: "Data Analytics & Machine Learning",
+  featured: false,
+  techStack: [
+    "Python",
+    "Streamlit",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Seaborn"
+  ],
+  highlights: [
+    "Interactive CSV file upload system",
+    "Dynamic KPI metric generation",
+    "Real-time statistical analysis",
+    "Visual performance insights with charts",
+    "Deployed as public Streamlit dashboard"
+  ],
+  liveUrl: "https://student-analysis-p.streamlit.app",
+  githubUrl: "https://github.com/Saleem-bazhil/Student-Analysis",
+  role: "Data Analyst & Machine Learning Developer",
+  duration: "1 Month",
+  type: "Data Analytics Dashboard",
+
+  longDescription:
+    "The Student Performance Analysis Dashboard is an interactive data analytics web application built using Streamlit. It allows users to upload student datasets in CSV format and instantly generate performance metrics, statistical summaries, and visual insights. The system analyzes student marks, class distribution, and academic trends to identify strengths and improvement areas through structured data visualization.",
+
+  problemStatement: {
+    problem:
+      "Educational institutions often struggle to quickly interpret student performance data and identify patterns for improvement.",
+    targetAudience:
+      "Teachers, academic administrators, and data analysts in education domain.",
+    marketGap:
+      "Many academic datasets are stored in raw CSV formats without interactive visualization tools for quick insight extraction."
+  },
+
+  solutionApproach: {
+    frontend:
+      "Developed an interactive Streamlit interface that allows drag-and-drop CSV uploads and dynamically updates visualizations based on user input.",
+    backend:
+      "Implemented data preprocessing and statistical computation using Pandas and NumPy for performance analysis.",
+    apiFlow:
+      "User uploads CSV → Data validation & preprocessing → Metric computation → Visualization generation → Insight display.",
+    authentication:
+      "Standalone Streamlit analytics dashboard deployed publicly without authentication layer."
+  },
+
+  features: [
+    {
+      icon: "📂",
+      title: "CSV Data Upload",
+      description:
+        "Drag-and-drop interface for uploading student datasets in CSV format."
+    },
+    {
+      icon: "📊",
+      title: "Dynamic KPI Metrics",
+      description:
+        "Automatically calculates total students, average percentage, number of classes, and dataset columns."
+    },
+    {
+      icon: "📈",
+      title: "Interactive Visualizations",
+      description:
+        "Generates charts and statistical insights to identify academic performance trends."
+    },
+    {
+      icon: "⚡",
+      title: "Real-Time Processing",
+      description:
+        "Instant dataset processing and visualization rendering without page reload."
+    }
+  ],
+
+  technicalDetails: {
+    database:
+      "No external database – operates directly on uploaded CSV files using Pandas DataFrames.",
+    apiEndpoints:
+      "No REST API – implemented as an interactive analytics dashboard using Streamlit.",
+    security:
+      "File validation handling for CSV uploads with controlled memory usage.",
+    performance:
+      "Optimized DataFrame operations for fast metric calculation and real-time chart updates.",
+    challenges:
+      "Handling different CSV structures dynamically and ensuring accurate statistical calculations across varied datasets."
+  }
+}
 ];
 
 export default projects;
