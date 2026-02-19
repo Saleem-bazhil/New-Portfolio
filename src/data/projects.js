@@ -121,79 +121,114 @@ const projects = [
       "Designing a scalable multi-role workflow while ensuring strict access control and maintaining clean separation between mobile and admin clients.",
   }
 },
+   {
+  id: 2,
+  slug: "fullstack-ecommerce-react-django",
+  title: "Full Stack E-Commerce Platform",
+  description:
+    "Production-ready e-commerce platform with Razorpay integration, admin dashboard, and secure REST API architecture.",
+  tagline:
+    "Complete online store with secure payments and full admin control.",
+  image: "/images/ecommerce.png",
+  category: "Full Stack",
+  featured: true,
+  techStack: [
+    "React",
+    "Django",
+    "Django REST Framework",
+    "PostgreSQL",
+    "Razorpay",
+    "JWT",
+    "Tailwind CSS",
+    "vercel",
+    "Linux VPS"
+  ],
+  highlights: [
+    "Live production deployment on custom domain",
+    "Razorpay payment gateway integration with backend verification",
+    "JWT-based authentication with protected routes",
+    "Admin dashboard for product and order management",
+    "RESTful API architecture with 20+ endpoints"
+  ],
+  liveUrl: "https://ecommerce.bazhilgroups.in",
+  githubUrl: "https://github.com/Saleem-bazhil/Ecommerce_backend",
+  repositories: {
+    frontend: "https://github.com/Saleem-bazhil/Ecommerce_frontend",
+    backend: "https://github.com/Saleem-bazhil/Ecommerce_backend"
+  },
+  role: "Full Stack Developer",
+  duration: "3 Months",
+  type: "Production Application",
+
+  longDescription:
+    "A fully functional e-commerce platform built using React and Django REST Framework. The system includes product management, shopping cart functionality, Razorpay payment integration, order lifecycle management, and an admin dashboard. Designed with clean REST architecture and deployed on a production domain.",
+
+  problemStatement: {
+    problem:
+      "Small businesses need a customizable and scalable e-commerce solution without relying on third-party platforms charging recurring commissions.",
+    targetAudience:
+      "Startups and small businesses looking for full control over their online store.",
+    marketGap:
+      "Existing SaaS platforms restrict backend customization and charge transaction fees. A custom-built system ensures flexibility and ownership.",
+  },
+
+  solutionApproach: {
+    frontend:
+      "Developed a responsive React single-page application with reusable components for product listings, cart management, checkout, and authentication flows.",
+    backend:
+      "Designed a modular Django REST Framework backend handling authentication, product CRUD, order processing, and Razorpay payment verification.",
+    apiFlow:
+      "React Client → DRF API → Razorpay Order Creation → Payment Verification → PostgreSQL Order Storage → Response to Client.",
+    authentication:
+      "JWT-based authentication with access and refresh tokens. Protected admin routes using permission classes and middleware.",
+  },
+
+  features: [
     {
-        id: 2,
-        slug: "shopflow-ecommerce",
-        title: "ShopFlow E-Commerce",
-        description:
-            "Modern e-commerce platform with Stripe payments, dynamic product catalog, and real-time order tracking.",
-        tagline:
-            "Full-featured e-commerce platform with payment processing and inventory management.",
-        image: "/images/project2.png",
-        category: "Full Stack",
-        featured: true,
-        techStack: ["React", "Django", "Stripe", "PostgreSQL", "Tailwind"],
-        highlights: [
-            "Stripe payment gateway with subscription support",
-            "Dynamic product catalog with advanced search and filtering",
-            "Order management system with real-time status tracking",
-            "Admin dashboard with sales analytics and inventory alerts",
-        ],
-        liveUrl: "https://example.com",
-        githubUrl: "https://github.com/your-repo",
-        role: "Full Stack Developer",
-        duration: "2.5 Months",
-        longDescription:
-            "A modern e-commerce solution built for small businesses. Features a sleek product catalog, secure payment processing via Stripe, and a comprehensive admin panel for managing orders and inventory.",
-        problemStatement: {
-            problem:
-                "Small businesses needed an affordable, customizable e-commerce solution that doesn't charge high transaction fees.",
-            targetAudience:
-                "Small to medium retail businesses wanting to establish an online presence.",
-            marketGap:
-                "Platforms like Shopify charge monthly fees plus transaction costs. No affordable self-hosted alternative with modern UX.",
-        },
-        solutionApproach: {
-            frontend:
-                "React with Tailwind CSS for a modern, responsive shopping experience. Optimistic UI updates for seamless user interactions.",
-            backend:
-                "Django REST Framework with Stripe integration. Celery for background order processing and email notifications.",
-            apiFlow:
-                "RESTful API for product management, cart operations, and order processing. Webhook handlers for Stripe payment events.",
-            authentication:
-                "JWT auth with social login support. Customer accounts with order history and saved addresses.",
-        },
-        features: [
-            {
-                icon: "💳",
-                title: "Secure Payments",
-                description: "Stripe integration with support for cards, wallets, and subscriptions.",
-            },
-            {
-                icon: "🔍",
-                title: "Smart Search",
-                description: "Full-text search with filters for category, price range, and ratings.",
-            },
-            {
-                icon: "📦",
-                title: "Order Tracking",
-                description: "Real-time order status updates with email notifications.",
-            },
-            {
-                icon: "📊",
-                title: "Sales Analytics",
-                description: "Admin dashboard with revenue charts, top products, and customer insights.",
-            },
-        ],
-        technicalDetails: {
-            database: "PostgreSQL with full-text search capabilities and optimized product queries.",
-            apiEndpoints: "20+ endpoints for products, cart, orders, payments, and user management.",
-            security: "PCI-compliant payment handling via Stripe. CSRF protection and rate limiting.",
-            performance: "Image optimization, CDN integration, and database query caching.",
-            challenges:
-                "Implementing real-time inventory management with concurrent order handling. Used database-level locking and Celery task queues.",
-        },
+      icon: "💳",
+      title: "Secure Razorpay Payments",
+      description:
+        "Integrated Razorpay (Test Mode) with server-side signature verification for secure transaction handling.",
     },
+    {
+      icon: "🛒",
+      title: "Dynamic Shopping Cart",
+      description:
+        "Cart system with quantity updates, price calculations, and checkout workflow.",
+    },
+    {
+      icon: "📦",
+      title: "Order Management",
+      description:
+        "Complete order lifecycle tracking with PostgreSQL storage.",
+    },
+    {
+      icon: "🛠",
+      title: "Admin Dashboard",
+      description:
+        "Admin panel for managing products, users, inventory, and orders.",
+    },
+    {
+      icon: "🚀",
+      title: "Production Deployment",
+      description:
+        "Hosted on Linux VPS with custom domain configuration and production-ready setup.",
+    }
+  ],
+
+  technicalDetails: {
+    database:
+      "PostgreSQL relational schema with normalized tables for users, products, carts, and orders.",
+    apiEndpoints:
+      "20+ RESTful endpoints covering authentication, product management, cart operations, Razorpay order creation, and payment verification.",
+    security:
+      "JWT authentication, Razorpay signature validation, input validation, permission-based access control.",
+    performance:
+      "Optimized database queries, paginated APIs, and efficient React rendering to reduce unnecessary re-renders.",
+    challenges:
+      "Implemented secure server-side Razorpay signature verification to ensure payments are validated before marking orders successful.",
+  }
+},
     {
         id: 3,
         slug: "connecthub-social",
