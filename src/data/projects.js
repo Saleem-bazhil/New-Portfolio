@@ -229,73 +229,92 @@ const projects = [
       "Implemented secure server-side Razorpay signature verification to ensure payments are validated before marking orders successful.",
   }
 },
-    {
-        id: 3,
-        slug: "connecthub-social",
-        title: "ConnectHub Social",
-        description:
-            "Social networking application with real-time messaging, user profiles, and content sharing.",
-        tagline:
-            "Real-time social platform with messaging, profiles, and content sharing.",
-        image: "/images/project3.png",
-        category: "Full Stack",
-        featured: false,
-        techStack: ["React", "Django", "WebSocket", "PostgreSQL"],
-        liveUrl: "https://example.com",
-        githubUrl: "https://github.com/your-repo",
-        role: "Full Stack Developer",
-        duration: "2.5 Months",
-        longDescription:
-            "A private social networking platform designed for team communication. Features real-time messaging, content sharing, and customizable user profiles.",
-        problemStatement: {
-            problem:
-                "Communities needed a private social platform for team communication that didn't rely on third-party services with privacy concerns.",
-            targetAudience:
-                "Teams, organizations, and communities wanting a self-hosted social communication platform.",
-            marketGap:
-                "Existing platforms like Slack and Discord are subscription-based and store data on external servers. No lightweight, self-hosted alternative existed.",
-        },
-        solutionApproach: {
-            frontend:
-                "React SPA with real-time WebSocket integration for instant messaging. Optimistic UI updates for seamless user experience.",
-            backend:
-                "Django Channels for WebSocket support. Django REST Framework for standard CRUD operations. Celery for background notification processing.",
-            apiFlow:
-                "Hybrid REST + WebSocket architecture. REST for CRUD operations, WebSockets for real-time messaging and presence indicators.",
-            authentication:
-                "JWT-based authentication with session management. OAuth2 support for third-party login providers.",
-        },
-        features: [
-            {
-                icon: "💬",
-                title: "Real-time Chat",
-                description: "Instant messaging with typing indicators and read receipts.",
-            },
-            {
-                icon: "👤",
-                title: "User Profiles",
-                description: "Customizable profiles with avatar uploads and activity feeds.",
-            },
-            {
-                icon: "📸",
-                title: "Content Sharing",
-                description: "Share posts, images, and links with your network.",
-            },
-            {
-                icon: "🔔",
-                title: "Notifications",
-                description: "Real-time push notifications for messages and interactions.",
-            },
-        ],
-        technicalDetails: {
-            database: "PostgreSQL with optimized queries for social graph traversal and feed generation.",
-            apiEndpoints: "25+ endpoints covering messaging, profiles, posts, and notifications.",
-            security: "End-to-end encryption for messages. Content moderation and spam filtering.",
-            performance: "Efficient WebSocket connection management with connection pooling. Paginated feeds with infinite scroll.",
-            challenges:
-                "Scaling real-time messaging with multiple concurrent connections. Implemented Redis-backed channel layers with horizontal scaling support.",
-        },
+ {
+    id: 3,
+    slug: "skiez-pdf-books",
+    title: "Skiez PDF Books Platform",
+    description:
+        "Digital PDF selling platform with real Razorpay payment integration and secure file access system.",
+    tagline:
+        "Secure PDF e-commerce platform with real Razorpay payments and protected downloads.",
+    image: "/images/pdfguide.png", 
+    category: "Full Stack",
+    featured: true,
+    techStack: ["React", "Node.js", "Express", "MongoDB", "Razorpay", "JWT" ,"Admin js"],
+    highlights: [
+        "Real Razorpay live payment integration",
+        "Secure server-side payment signature verification",
+        "Protected PDF View after successful purchase",
+        "Admin dashboard for product & order management",
+        "Production deployment with SSL and domain configuration",
+    ],
+    liveUrl: "https://www.skiezpdfbooks.in",
+    githubUrl: "https://github.com/Saleem-bazhil/Course_new_version_frontend",
+    role: "Full Stack Developer",
+    duration: "2 Months",
+    longDescription:
+        "Skiez PDF Books is a secure digital e-commerce platform built for selling premium PDF resources online. The system includes real Razorpay payment integration with backend signature verification, protected file access, and a complete admin panel for managing products and orders. Designed for production deployment with performance optimization and secure digital delivery.",
+
+    problemStatement: {
+        problem:
+            "Content creators needed a secure way to sell digital PDF products without exposing files publicly.",
+        targetAudience:
+            "Students, digital content creators, and users purchasing educational PDF resources.",
+        marketGap:
+            "Many digital platforms expose downloadable files directly without secure payment verification and access control.",
     },
+
+    solutionApproach: {
+        frontend:
+            "React-based responsive UI with secure checkout flow and protected download access after purchase confirmation.",
+        backend:
+            "Node.js + Express backend handling order creation, Razorpay integration, and server-side signature verification.",
+        apiFlow:
+            "Client → Create Order API → Razorpay Checkout → Payment Success → Backend Signature Verification → Store Purchase → Enable Secure View.",
+        authentication:
+            "JWT-based authentication with protected routes and purchase validation before file download access.",
+    },
+
+    features: [
+        {
+            icon: "💳",
+            title: "Real Razorpay Integration",
+            description:
+                "Live Razorpay payment gateway with secure order creation and signature verification.",
+        },
+        {
+            icon: "🔐",
+            title: "Secure File Access",
+            description:
+                "PDF downloads are protected and accessible only after successful payment verification.",
+        },
+        {
+            icon: "📊",
+            title: "Admin Panel",
+            description:
+                "Admin dashboard to manage products, users, and payment records.",
+        },
+        {
+            icon: "⚡",
+            title: "Optimized Performance",
+            description:
+                "Efficient API design, pagination, and secure middleware-based access control.",
+        },
+    ],
+
+    technicalDetails: {
+        database:
+            "MongoDB relational database with normalized schema for users, products, orders, and payment records.",
+        apiEndpoints:
+            "20+ RESTful endpoints covering authentication, product CRUD, order creation, payment verification, and download access.",
+        security:
+            "Server-side Razorpay signature validation, JWT authentication, password hashing, input validation, and protected file routes.",
+        performance:
+            "Optimized queries, secure middleware architecture, and production deployment with SSL configuration.",
+        challenges:
+            "Implementing secure digital file delivery while preventing unauthorized access and ensuring proper Razorpay signature validation.",
+    },
+},
     {
         id: 4,
         slug: "taskboard-pro",
