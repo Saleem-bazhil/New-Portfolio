@@ -175,15 +175,15 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+    review: "Saleem is a skilled full stack developer with strong expertise in Django and React. He successfully integrated Razorpay and built scalable applications.His work improved performance and overall user experience.",
     imgPath: "/images/exp1.png",
     logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    title: "Python Full Stack Developer (Part-Time)",
+    date: "October 2025 - Present",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Developing full stack applications using Python (Django), React, and MERN stack technologies.",
+      "Integrated Razorpay payment gateway for secure and reliable online transactions.",
+      "Built and integrated RESTful APIs for seamless frontend–backend communication.",
     ],
   },
   {

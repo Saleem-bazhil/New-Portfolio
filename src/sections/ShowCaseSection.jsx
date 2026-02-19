@@ -2,7 +2,7 @@ import { useRef, memo } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-
+import { Link } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
 const AppShowcase = memo(() => {
@@ -115,6 +115,15 @@ const AppShowcase = memo(() => {
             </div>
           </div>
         </div>
+        <Link to="/projects" className="cta-wrapper md:w-80 md:h-16 w-60 h-12 mt-10 mx-auto block">
+          <div className="cta-button group">
+            <div className="bg-circle" />
+            <p className="text">View All Projects</p>
+            <div className="arrow-wrapper">
+              <img src="/images/arrow-down.svg" alt="arrow" loading="lazy" />
+            </div>
+          </div>
+        </Link>
       </div>
     </div>
   );

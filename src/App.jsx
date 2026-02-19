@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 
 import NavBar from "./sections/NavBar";
+import ScrollToTop from "./components/ScrollToTop";
 
 const Home = lazy(() => import("./pages/Home"));
 const Projects = lazy(() => import("./pages/Projects"));
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       {!isProjectPage && <NavBar />}
       <Suspense fallback={null}>
         <Routes>

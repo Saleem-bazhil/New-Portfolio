@@ -25,7 +25,7 @@ const ExperienceSection = memo(() => {
       });
     });
 
-  
+
     gsap.to(".timeline", {
       transformOrigin: "bottom bottom",
       ease: "power1.inOut",
@@ -53,7 +53,7 @@ const ExperienceSection = memo(() => {
           start: "top 60%",
         },
       });
-    }, "<"); 
+    }, "<");
   }, []);
 
   return (
