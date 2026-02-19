@@ -782,7 +782,96 @@ const projects = [
         challenges:
             "Improving model accuracy and handling ambiguous text samples.",
     },
-}
+},
+{
+  id: 10,
+  slug: "digit-recognition-system",
+  title: "Handwritten Digit Recognition System",
+  description:
+    "Machine learning-based image classification system that recognizes handwritten digits using the MNIST dataset.",
+  tagline:
+    "AI-powered handwritten digit recognition using supervised learning.",
+  image: "/images/digit-recognition.png",
+  category: "AI & Machine Learning",
+  featured: false,
+  techStack: [
+    "Python",
+    "Streamlit",
+    "Scikit-learn",
+    "NumPy",
+    "Pandas",
+    "MNIST Dataset"
+  ],
+  highlights: [
+    "Trained on MNIST handwritten digit dataset",
+    "Interactive digit drawing input",
+    "Real-time classification with optimized inference",
+    "Streamlit-based public deployment",
+    "End-to-end ML pipeline implementation"
+  ],
+  liveUrl: "https://digit-recognitions.streamlit.app",
+  githubUrl: "https://github.com/Saleem-bazhil/Degit-Recogination",
+  role: "Machine Learning Developer",
+  duration: "1 Month",
+  type: "Machine Learning Application",
+
+  longDescription:
+    "A supervised machine learning application designed to recognize handwritten digits (0–9). The system is trained on the MNIST dataset and processes user-drawn input images through preprocessing, feature extraction, and classification to deliver accurate predictions in real time.",
+
+  problemStatement: {
+    problem:
+      "Accurately recognizing handwritten digits is a fundamental challenge in computer vision and pattern recognition systems.",
+    targetAudience:
+      "Students, ML learners, and researchers exploring supervised image classification techniques.",
+    marketGap:
+      "Understanding foundational digit recognition is essential before building advanced AI systems such as OCR and automated document processing."
+  },
+
+  solutionApproach: {
+    frontend:
+      "Built an interactive Streamlit UI allowing users to draw or upload handwritten digits directly in the browser.",
+    backend:
+      "Implemented a supervised classification model trained on the MNIST dataset using Scikit-learn.",
+    apiFlow:
+      "User draws/uploads digit → Image resized & normalized → Flattened into feature vector → Model prediction → Digit displayed instantly.",
+    authentication:
+      "Standalone ML web application deployed publicly via Streamlit without authentication layer."
+  },
+
+  features: [
+    {
+      icon: "✍️",
+      title: "Interactive Drawing Interface",
+      description:
+        "Users can draw handwritten digits directly inside the web application."
+    },
+    {
+      icon: "🧠",
+      title: "Supervised Learning Model",
+      description:
+        "Classification model trained on MNIST dataset to predict digits from 0–9."
+    },
+    {
+      icon: "⚡",
+      title: "Real-Time Inference",
+      description:
+        "Optimized lightweight model ensures fast and responsive predictions."
+    }
+  ],
+
+  technicalDetails: {
+    database:
+      "MNIST dataset used for training and evaluation of the classification model.",
+    apiEndpoints:
+      "No REST API – deployed as a Streamlit-based interactive ML application.",
+    security:
+      "Client-side input handling with controlled preprocessing to maintain stable inference.",
+    performance:
+      "Optimized feature extraction and lightweight model selection for low-latency predictions.",
+    challenges:
+      "Handling noisy or poorly drawn digits and improving prediction accuracy through normalization and preprocessing techniques."
+  }
+},
 ];
 
 export default projects;
