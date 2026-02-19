@@ -107,7 +107,7 @@ const Projects = () => {
           <div className="mb-12 sm:mb-16 md:mb-20">
             <div className="flex items-center gap-3 mb-6 sm:mb-8 md:mb-10">
               <h2 className="general-sans text-xl sm:text-2xl font-bold text-white">
-                Featured Projects
+                Top Projects
               </h2>
               <span className="px-3 py-1 rounded-full bg-white/[0.06] border border-white/[0.08] text-white-50 text-xs font-medium">
                 {featuredProjects.length}

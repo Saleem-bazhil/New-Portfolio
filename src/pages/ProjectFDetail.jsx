@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { useRef, useCallback, useState, useEffect } from "react";
+import { useRef, useCallback } from "react";
 import { Helmet } from "react-helmet-async";
 import projects from "../data/projects";
 
@@ -7,11 +7,7 @@ const ProjectFDetail = () => {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
   const cardRefs = useRef([]);
-  const [imageLoaded, setImageLoaded] = useState(false);
 
-  useEffect(() => {
-    setImageLoaded(false);
-  }, [slug]);
 
   const handleMouseMove = useCallback(
     (index) => (e) => {
@@ -67,14 +63,12 @@ const ProjectFDetail = () => {
         {/* Background Image */}
         <img
           src={project.image}
-          alt=""
-          onLoad={() => setImageLoaded(true)}
-          className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-1000 ${imageLoaded ? "opacity-100" : "opacity-0"
-            }`}
+          alt={project.title}
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
         {/* Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#010103]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-[#010103]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20" />
 
         {/* Back Link - Top Left */}
         <Link

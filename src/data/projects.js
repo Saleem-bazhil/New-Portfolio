@@ -652,7 +652,7 @@ const projects = [
         "Structured online learning platform for web development courses.",
     image: "/images/web-course-platform.png",
     category: "Full Stack Web Development",
-    featured: true,
+    featured: false,
     techStack: [
         "Python",
         "Django",
