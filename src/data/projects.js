@@ -410,7 +410,7 @@ const projects = [
         "AI-powered EdTech platform integrating Grok API with FastAPI backend for intelligent learning assistance.",
     tagline:
         "Smart AI-powered education platform with Grok integration and secure FastAPI backend.",
-    image: "/images/edutech.png",
+    image: "/images/edutechai.png",
     category: "AI",
     featured: true,
     techStack: [
