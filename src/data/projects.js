@@ -402,55 +402,102 @@ const projects = [
             "Designing a dynamic route generator while preserving flexibility, scalability, and clean separation of concerns."
     }
 },
-    {
-        id: 5,
-        slug: "propertyvista",
-        title: "PropertyVista",
-        description:
-            "Real estate listing platform with map integration, advanced filters, and virtual tour capabilities.",
-        tagline:
-            "Real estate platform with interactive maps and virtual property tours.",
-        image: "/images/project1.png",
-        category: "Full Stack",
-        featured: false,
-        techStack: ["React", "Django", "Mapbox", "PostgreSQL"],
-        liveUrl: "https://example.com",
-        githubUrl: "https://github.com/your-repo",
-        role: "Full Stack Developer",
-        duration: "3 Months",
-        longDescription:
-            "A comprehensive real estate platform with interactive map-based property browsing, advanced search filters, and virtual tour capabilities.",
-        solutionApproach: {
-            frontend: "React SPA with Mapbox GL for interactive map-based browsing. Responsive gallery with virtual tour viewer.",
-            backend: "Django REST Framework with geospatial queries. PostGIS for location-based property search.",
-            apiFlow: "REST API with geospatial filtering. Image upload pipeline with automatic optimization.",
-            authentication: "JWT auth with agent and buyer roles. Property inquiry and scheduling system.",
-        },
-        features: [
-            {
-                icon: "🗺️",
-                title: "Interactive Maps",
-                description: "Browse properties on an interactive map with clustering and filters.",
-            },
-            {
-                icon: "🏠",
-                title: "Virtual Tours",
-                description: "360-degree virtual property tours with hotspot navigation.",
-            },
-            {
-                icon: "🔍",
-                title: "Advanced Search",
-                description: "Filter by location, price, bedrooms, amenities, and more.",
-            },
-        ],
-        technicalDetails: {
-            database: "PostgreSQL with PostGIS extension for geospatial queries and indexing.",
-            apiEndpoints: "18+ endpoints for properties, agents, inquiries, and favorites.",
-            security: "Rate limiting, input sanitization, and secure file upload handling.",
-            performance: "Map tile caching, lazy-loaded images, and database spatial indexing for fast geo-queries.",
-            challenges: "Implementing efficient geospatial search with complex polygon-based area filtering while maintaining sub-second response times.",
-        },
+{
+    id: 6,
+    slug: "edutech-ai-platform",
+    title: "EduTech AI Learning Platform",
+    description:
+        "AI-powered EdTech platform integrating Grok API with FastAPI backend for intelligent learning assistance.",
+    tagline:
+        "Smart AI-powered education platform with Grok integration and secure FastAPI backend.",
+    image: "/images/edutech.png",
+    category: "AI",
+    featured: true,
+    techStack: [
+        "React",
+        "FastAPI",
+        "Python",
+        "Grok API",
+        "JWT",
+        "PostgreSQL",
+        "Linux VPS",
+        "Nginx"
+    ],
+    highlights: [
+        "Grok API integration for AI-powered responses",
+        "FastAPI backend with async processing",
+        "Secure JWT authentication system",
+        "Production deployment on Linux VPS",
+        "Structured AI prompt handling system"
+    ],
+    liveUrl: "https://edutech.bazhilgroups.in",
+    githubUrl: "https://github.com/Saleem-bazhil/Edutech_Backend",
+    role: "Full Stack AI Developer",
+    duration: "2 Months",
+
+    longDescription:
+        "EduTech is an AI-powered education platform built to provide intelligent academic assistance using Grok API integration. The system leverages FastAPI for high-performance backend processing and React for a responsive frontend interface. Designed as a scalable SaaS architecture, the platform enables secure AI-driven interactions for students and learners.",
+
+    problemStatement: {
+        problem:
+            "Students lack affordable and intelligent AI-powered academic support platforms tailored to structured learning.",
+        targetAudience:
+            "School and college students seeking AI-based academic assistance and concept clarification.",
+        marketGap:
+            "Most AI tools are generic chat systems without structured academic workflow or secure backend architecture."
     },
+
+    solutionApproach: {
+        frontend:
+            "React-based dynamic UI optimized for interactive AI conversations and seamless user experience.",
+        backend:
+            "FastAPI backend with asynchronous request handling for Grok API calls, structured service layers, and modular architecture.",
+        apiFlow:
+            "Client → FastAPI → Grok API → Processed AI Response → Structured JSON Output → Frontend Display.",
+        authentication:
+            "JWT-based secure authentication with token validation middleware and protected AI endpoints."
+    },
+
+    features: [
+        {
+            icon: "🤖",
+            title: "Grok AI Integration",
+            description:
+                "Integrated Grok API for intelligent academic assistance and AI-generated explanations."
+        },
+        {
+            icon: "⚡",
+            title: "High-Performance Backend",
+            description:
+                "FastAPI asynchronous processing for low-latency AI response handling."
+        },
+        {
+            icon: "🔐",
+            title: "Secure Authentication",
+            description:
+                "JWT-based authentication with protected routes and secure API communication."
+        },
+        {
+            icon: "🌐",
+            title: "Cloud Deployment",
+            description:
+                "Deployed on Linux VPS with Nginx reverse proxy and SSL configuration."
+        }
+    ],
+
+    technicalDetails: {
+        database:
+            "PostgreSQL relational database for user data and interaction logs.",
+        apiEndpoints:
+            "15+ RESTful endpoints covering authentication, AI queries, user management, and analytics.",
+        security:
+            "JWT authentication, environment-based API key protection, input validation, and rate limiting.",
+        performance:
+            "Async FastAPI architecture with optimized API response handling and structured JSON formatting.",
+        challenges:
+            "Securely managing Grok API keys and handling AI response latency while maintaining scalable backend architecture."
+    }
+},
     {
         id: 6,
         slug: "ai-chatbot",
