@@ -574,104 +574,148 @@ const projects = [
             "Managing large image processing without blocking API response and improving detection accuracy under low-light conditions.",
     },
 },
-    {
-        id: 7,
-        slug: "blog-platform",
-        title: "Blog Platform",
-        description:
-            "Modern blogging platform with rich text editor, SEO optimization, and content scheduling.",
-        tagline:
-            "Feature-rich blogging platform with SEO tools and scheduling.",
-        image: "/images/project3.png",
-        category: "Frontend",
-        featured: false,
-        techStack: ["React", "Next.js", "MDX", "Tailwind"],
-        liveUrl: "https://example.com",
-        githubUrl: "https://github.com/your-repo",
-        role: "Frontend Developer",
-        duration: "1.5 Months",
-        longDescription:
-            "A modern blogging platform with a rich text editor, automatic SEO optimization, and content scheduling. Built with Next.js for server-side rendering and optimal performance.",
-        solutionApproach: {
-            frontend: "Next.js with MDX support for rich content. Tailwind CSS for responsive, modern styling.",
-            backend: "Next.js API routes with serverless functions. MDX processing pipeline for content transformation.",
-            apiFlow: "ISR for blog pages with on-demand revalidation. API routes for content management and scheduling.",
-            authentication: "NextAuth.js with multi-provider support. Admin panel with content approval workflow.",
-        },
-        features: [
-            {
-                icon: "✏️",
-                title: "Rich Editor",
-                description: "WYSIWYG editor with code blocks, images, and embedded media.",
-            },
-            {
-                icon: "🔍",
-                title: "SEO Optimized",
-                description: "Automatic meta tags, sitemaps, and structured data for search engines.",
-            },
-            {
-                icon: "📅",
-                title: "Scheduling",
-                description: "Schedule posts for future publication with timezone support.",
-            },
-        ],
-        technicalDetails: {
-            database: "PostgreSQL with full-text search for content discovery.",
-            apiEndpoints: "12+ endpoints for posts, categories, comments, and media management.",
-            security: "Content sanitization, CSRF protection, and spam filtering for comments.",
-            performance: "ISR with stale-while-revalidate. Image optimization with next/image. Edge caching.",
-            challenges: "Implementing a flexible MDX pipeline that supports custom components while maintaining fast build and render times.",
-        },
+{
+    id: 7,
+    slug: "digital-ads-sales-detection",
+    title: "Digital Ads Sales Prediction System",
+    description:
+        "Machine learning-based sales prediction system analyzing digital advertisement performance using data-driven insights.",
+    tagline:
+        "AI-powered sales prediction using machine learning.",
+    image: "/images/sales-detection.png",
+    category: "AI & Machine Learning",
+    featured: false,
+    techStack: [
+        "Python",
+        "Streamlit",
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "Matplotlib"
+    ],
+    liveUrl: "https://digital-ads-sales.streamlit.app",
+    githubUrl: "https://github.com/Saleem-bazhil/Sales_Detection",
+    role: "Machine Learning Developer",
+    duration: "1 Month",
+    longDescription:
+        "A machine learning-based application that predicts sales performance based on digital advertisement data. The system analyzes ad spend across different platforms and provides data-driven insights using regression models.",
+    solutionApproach: {
+        frontend:
+            "Streamlit-based interactive dashboard with real-time prediction input fields and visualizations.",
+        backend:
+            "Machine learning regression model built using Scikit-learn for sales prediction.",
+        apiFlow:
+            "User inputs advertisement spend → Model processes data → Predicts expected sales output → Displays results with visual analytics.",
+        authentication:
+            "Standalone ML web app deployed on Streamlit without authentication.",
     },
-    {
-        id: 8,
-        slug: "weather-dashboard",
-        title: "Weather Dashboard",
-        description:
-            "Real-time weather application with interactive maps, forecasts, and severe weather alerts.",
-        tagline:
-            "Beautiful weather app with forecasts, maps, and alerts.",
-        image: "/images/edutech.png",
-        category: "Frontend",
-        featured: false,
-        techStack: ["React", "OpenWeather API", "Mapbox", "Chart.js"],
-        liveUrl: "https://example.com",
-        githubUrl: "https://github.com/your-repo",
-        role: "Frontend Developer",
-        duration: "1 Month",
-        longDescription:
-            "A stunning weather dashboard that provides real-time weather data, 7-day forecasts, and interactive weather maps with severe weather alerts.",
-        solutionApproach: {
-            frontend: "React with Chart.js for temperature and precipitation visualizations. Mapbox for weather overlay maps.",
-            backend: "Serverless functions for API proxy and data aggregation from multiple weather services.",
-            apiFlow: "Proxy API to OpenWeather for current conditions, forecasts, and alerts. Caching layer for rate limit management.",
-            authentication: "API key management for weather service access. User preferences stored locally.",
+    features: [
+        {
+            icon: "📊",
+            title: "Sales Prediction",
+            description:
+                "Predicts sales based on digital advertisement spending.",
         },
-        features: [
-            {
-                icon: "🌡️",
-                title: "Live Weather",
-                description: "Current conditions with temperature, humidity, wind, and UV index.",
-            },
-            {
-                icon: "📈",
-                title: "Forecasts",
-                description: "Hourly and 7-day forecasts with interactive temperature charts.",
-            },
-            {
-                icon: "⚠️",
-                title: "Severe Alerts",
-                description: "Push notifications for severe weather warnings in your area.",
-            },
-        ],
-        technicalDetails: {
-            database: "LocalStorage for user preferences and recent searches. Service worker for offline access.",
-            apiEndpoints: "5+ proxy endpoints for weather data, geocoding, and alerts.",
-            security: "Server-side API key management to prevent exposure. Rate limiting per user.",
-            performance: "Service worker caching for offline functionality. Optimized re-renders with React.memo.",
-            challenges: "Aggregating data from multiple weather APIs into a unified format while handling rate limits and ensuring data freshness.",
+        {
+            icon: "📈",
+            title: "Data Visualization",
+            description:
+                "Interactive charts for ad performance analysis.",
         },
+        {
+            icon: "⚡",
+            title: "Real-Time Results",
+            description:
+                "Instant prediction output with dynamic input controls.",
+        },
+    ],
+    technicalDetails: {
+        database:
+            "Dataset processed using Pandas DataFrames (no external database required).",
+        apiEndpoints:
+            "No REST API – deployed as an interactive Streamlit web application.",
+        security:
+            "Runs as a standalone ML dashboard application.",
+        performance:
+            "Lightweight regression model optimized for fast real-time predictions.",
+        challenges:
+            "Selecting appropriate regression model and tuning parameters for accurate sales prediction.",
     },
+},
+  {
+    id: 8,
+    slug: "web-development-learning-platform",
+    title: "Web Development Learning Platform",
+    description:
+        "Full-stack e-learning platform that organizes programming tutorials into structured courses with authentication and protected access.",
+    tagline:
+        "Structured online learning platform for web development courses.",
+    image: "/images/web-course-platform.png",
+    category: "Full Stack Web Development",
+    featured: true,
+    techStack: [
+        "Python",
+        "Django",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap"
+    ],
+    liveUrl: "https://web-development-course-pdxz.onrender.com",
+    githubUrl: "https://github.com/Saleem-bazhil/Web-Development-Course",
+    role: "Full Stack Developer",
+    duration: "2 Months",
+    longDescription:
+        "A full-stack web application designed to organize and deliver structured programming tutorials. The platform includes user authentication, categorized course modules, embedded video lessons, and protected routes to enhance learning experience.",
+    solutionApproach: {
+        frontend:
+            "Responsive UI built using HTML, CSS, Bootstrap, and JavaScript for structured course navigation.",
+        backend:
+            "Django-based backend handling authentication, routing, and content management.",
+        apiFlow:
+            "User login → Access protected dashboard → Browse categorized courses → View structured video lessons.",
+        authentication:
+            "User registration and login system with protected routes and session management.",
+    },
+    features: [
+        {
+            icon: "🔐",
+            title: "Authentication System",
+            description:
+                "Secure login and signup functionality with protected access.",
+        },
+        {
+            icon: "🎓",
+            title: "Course Organization",
+            description:
+                "Categorized programming courses (HTML, CSS, JS, React, Python).",
+        },
+        {
+            icon: "📺",
+            title: "Embedded Video Lessons",
+            description:
+                "Structured video content organized in learning sequence.",
+        },
+        {
+            icon: "📱",
+            title: "Responsive Design",
+            description:
+                "Modern UI layout optimized for desktop and mobile devices.",
+        },
+    ],
+    technicalDetails: {
+        database:
+            "SQLite (or configured DB) for managing users and course data.",
+        apiEndpoints:
+            "Django views handling authentication, course routing, and protected content.",
+        security:
+            "Session-based authentication and route protection.",
+        performance:
+            "Lightweight server-side rendering with optimized static asset handling.",
+        challenges:
+            "Designing structured course flow and managing protected content navigation.",
+    },
+},
 ];
 
 export default projects;
