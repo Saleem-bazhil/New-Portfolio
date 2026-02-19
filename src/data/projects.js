@@ -403,7 +403,7 @@ const projects = [
     }
 },
 {
-    id: 6,
+    id: 5,
     slug: "edutech-ai-platform",
     title: "EduTech AI Learning Platform",
     description:
@@ -498,55 +498,82 @@ const projects = [
             "Securely managing Grok API keys and handling AI response latency while maintaining scalable backend architecture."
     }
 },
-    {
-        id: 6,
-        slug: "ai-chatbot",
-        title: "AI Chatbot",
-        description:
-            "Intelligent chatbot application with natural language processing, multi-language support, and context-aware responses.",
-        tagline:
-            "AI-powered chatbot with NLP and multi-language support.",
-        image: "/images/project2.png",
-        category: "AI",
-        featured: false,
-        techStack: ["Python", "FastAPI", "React", "OpenAI"],
-        liveUrl: "https://example.com",
-        githubUrl: "https://github.com/your-repo",
-        role: "AI Developer",
-        duration: "2 Months",
-        longDescription:
-            "An intelligent chatbot leveraging NLP for context-aware conversations. Supports multiple languages and integrates with various APIs for comprehensive responses.",
-        solutionApproach: {
-            frontend: "React chat interface with real-time message streaming and markdown rendering.",
-            backend: "FastAPI with async processing for low-latency responses. Integration with OpenAI API for intelligent conversation.",
-            apiFlow: "Streaming API for real-time token-by-token response delivery. Context window management for conversation history.",
-            authentication: "API key-based auth with usage tracking and rate limiting per user.",
-        },
-        features: [
-            {
-                icon: "🤖",
-                title: "Smart Responses",
-                description: "Context-aware AI responses with conversation memory.",
-            },
-            {
-                icon: "🌐",
-                title: "Multi-language",
-                description: "Supports conversations in 10+ languages with auto-detection.",
-            },
-            {
-                icon: "📝",
-                title: "Rich Formatting",
-                description: "Markdown rendering with code syntax highlighting.",
-            },
-        ],
-        technicalDetails: {
-            database: "PostgreSQL for conversation history. Redis for session state and caching.",
-            apiEndpoints: "10+ endpoints for chat, history, settings, and usage analytics.",
-            security: "API key rotation, input sanitization, and content filtering.",
-            performance: "Streaming responses for instant feedback. Connection pooling and async processing.",
-            challenges: "Managing conversation context within token limits while maintaining coherent multi-turn conversations.",
-        },
+{
+    id: 6,
+    slug: "ai-smart-image-gallery",
+    title: "AI-Powered Smart Image Gallery",
+    description:
+        "Full-stack image gallery application integrated with AI-based face detection using OpenCV Haar Cascade model.",
+    tagline:
+        "Secure image gallery with automatic AI face detection.",
+    image: "/images/ai-gallery.png",
+    category: "AI & Web Development",
+    featured: false,
+    techStack: [
+        "React",
+        "Django",
+        "Django REST Framework",
+        "PostgreSQL",
+        "JWT",
+        "Python",
+        "OpenCV",
+        "Haar Cascade"
+    ],
+    liveUrl: "https://gallery.bazhilgroups.in",
+    githubUrl: "https://github.com/Saleem-bazhil/Gallery_backend",
+    role: "Full Stack & AI Developer",
+    duration: "3 Months",
+    longDescription:
+        "An advanced full-stack image gallery system integrated with AI-powered face detection. Users can upload images securely, and the system automatically detects faces using OpenCV's Haar Cascade model. Detected faces are highlighted and stored as metadata for future filtering and analysis.",
+    solutionApproach: {
+        frontend:
+            "React-based responsive gallery interface with image upload preview and dynamic face bounding box rendering.",
+        backend:
+            "Django REST APIs handling authentication, image uploads, and AI processing pipeline integration.",
+        apiFlow:
+            "Image uploaded → Backend processes image using OpenCV → Detects faces → Stores metadata in PostgreSQL → Returns processed image with face coordinates.",
+        authentication:
+            "JWT-based authentication with role-based access control for users and admin.",
     },
+    features: [
+        {
+            icon: "🖼",
+            title: "Secure Image Upload",
+            description:
+                "Users can securely upload and manage images with JWT-protected routes.",
+        },
+        {
+            icon: "🤖",
+            title: "AI Face Detection",
+            description:
+                "Automatically detects human faces using Haar Cascade classifier.",
+        },
+        {
+            icon: "📦",
+            title: "Face Metadata Storage",
+            description:
+                "Stores detected face count and coordinates in database for analysis.",
+        },
+        {
+            icon: "📱",
+            title: "Responsive UI",
+            description:
+                "Modern grid layout with real-time upload preview and AI detection feedback.",
+        },
+    ],
+    technicalDetails: {
+        database:
+            "PostgreSQL for user data, image metadata, and detected face coordinates.",
+        apiEndpoints:
+            "RESTful APIs for authentication, image upload, gallery listing, and AI detection results.",
+        security:
+            "JWT authentication, protected APIs, input validation, and secure media storage.",
+        performance:
+            "Optimized image preprocessing (grayscale conversion) for faster detection. Efficient API response handling.",
+        challenges:
+            "Managing large image processing without blocking API response and improving detection accuracy under low-light conditions.",
+    },
+},
     {
         id: 7,
         slug: "blog-platform",
