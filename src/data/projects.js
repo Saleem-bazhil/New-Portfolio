@@ -315,55 +315,93 @@ const projects = [
             "Implementing secure digital file delivery while preventing unauthorized access and ensuring proper Razorpay signature validation.",
     },
 },
-    {
-        id: 4,
-        slug: "taskboard-pro",
-        title: "TaskBoard Pro",
-        description:
-            "Kanban-style project management tool with drag-and-drop, team collaboration, and sprint planning.",
-        tagline:
-            "Kanban project management with drag-and-drop and team collaboration.",
-        image: "/images/edutech.png",
-        category: "Frontend",
-        featured: false,
-        techStack: ["React", "TypeScript", "DnD Kit", "Zustand"],
-        liveUrl: "https://example.com",
-        githubUrl: "https://github.com/your-repo",
-        role: "Frontend Developer",
-        duration: "1.5 Months",
-        longDescription:
-            "A modern Kanban-style project management tool with intuitive drag-and-drop interfaces, team collaboration features, and sprint planning capabilities.",
-        solutionApproach: {
-            frontend: "React with TypeScript for type-safe development. DnD Kit for smooth drag-and-drop interactions.",
-            backend: "RESTful API with Node.js and Express. Real-time updates via Socket.io.",
-            apiFlow: "REST endpoints for board management. WebSocket for real-time collaboration sync.",
-            authentication: "JWT-based auth with team invitation system and role management.",
-        },
-        features: [
-            {
-                icon: "📋",
-                title: "Kanban Boards",
-                description: "Drag-and-drop task cards across customizable columns.",
-            },
-            {
-                icon: "👥",
-                title: "Team Collaboration",
-                description: "Invite team members, assign tasks, and track progress together.",
-            },
-            {
-                icon: "🏃",
-                title: "Sprint Planning",
-                description: "Create sprints, set goals, and monitor velocity.",
-            },
-        ],
-        technicalDetails: {
-            database: "PostgreSQL with JSONB for flexible task metadata storage.",
-            apiEndpoints: "15+ endpoints for boards, columns, tasks, and team management.",
-            security: "Row-level security for multi-tenant data isolation. Input validation with Zod.",
-            performance: "Optimistic updates for instant UI feedback. Virtual scrolling for large boards.",
-            challenges: "Implementing smooth drag-and-drop with complex reordering logic across columns while maintaining data consistency.",
-        },
+ {
+    id: 4,
+    slug: "bazhil-auto-crud",
+    title: "bazhil-auto-crud (NPM Library)",
+    description:
+        "Open-source NPM package that automatically generates CRUD APIs for Mongoose models in Express applications.",
+    tagline:
+        "Eliminate repetitive CRUD boilerplate with dynamic API generation.",
+    image: "/images/npm.png",
+    category: "Backend",
+    featured: true,
+    techStack: ["Node.js", "Express.js", "MongoDB", "Mongoose", "NPM"],
+    liveUrl: "https://www.npmjs.com/package/bazhil-auto-crud",
+    githubUrl: "https://github.com/Saleem-bazhil/auto-crud",
+    role: "Backend Developer",
+    duration: "1 Month",
+
+    highlights: [
+        "Published and maintained NPM package",
+        "Dynamic CRUD route generation for any Mongoose model",
+        "Plug-and-play Express middleware architecture",
+        "Open-source with structured documentation"
+    ],
+
+    longDescription:
+        "bazhil-auto-crud is a reusable backend utility library built to eliminate repetitive CRUD boilerplate in Express.js applications. It dynamically binds RESTful endpoints to provided Mongoose models, significantly reducing development time while maintaining flexibility and clean architecture.",
+
+    problemStatement: {
+        problem:
+            "Developers repeatedly write similar CRUD logic for every database model, increasing code duplication and slowing backend development.",
+        targetAudience:
+            "Node.js and Express developers building REST APIs with MongoDB.",
+        marketGap:
+            "Most scaffolding tools are either too heavy or tightly coupled to specific frameworks. A lightweight middleware-based solution was needed."
     },
+
+    solutionApproach: {
+        frontend:
+            "Backend-focused package designed for API layer integration.",
+        backend:
+            "Created a dynamic Express middleware that auto-generates CRUD routes for registered Mongoose models.",
+        apiFlow:
+            "Mongoose Model → bazhil-auto-crud Middleware → Auto-generated REST Endpoints → MongoDB Database.",
+        authentication:
+            "Designed to integrate seamlessly with JWT authentication and custom middleware chains."
+    },
+
+    features: [
+        {
+            icon: "⚡",
+            title: "Automatic CRUD APIs",
+            description:
+                "Generates Create, Read, Update, and Delete routes dynamically for any Mongoose model."
+        },
+        {
+            icon: "🧩",
+            title: "Plug & Play",
+            description:
+                "Integrates easily into existing Express applications with minimal configuration."
+        },
+        {
+            icon: "📦",
+            title: "Reusable Architecture",
+            description:
+                "Clean modular structure designed for scalability and maintainability."
+        },
+        {
+            icon: "🔐",
+            title: "Middleware Compatible",
+            description:
+                "Supports authentication, validation, and custom middleware layering."
+        }
+    ],
+
+    technicalDetails: {
+        database:
+            "MongoDB with dynamic Mongoose schema binding.",
+        apiEndpoints:
+            "Auto-generates RESTful routes (GET, POST, PUT, DELETE) for registered models.",
+        security:
+            "Works with JWT authentication, request validation, and rate limiting middleware.",
+        performance:
+            "Lightweight implementation with minimal runtime overhead.",
+        challenges:
+            "Designing a dynamic route generator while preserving flexibility, scalability, and clean separation of concerns."
+    }
+},
     {
         id: 5,
         slug: "propertyvista",
