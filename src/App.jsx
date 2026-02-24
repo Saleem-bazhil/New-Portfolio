@@ -8,6 +8,7 @@ import ScrollToTop from "./components/ScrollToTop";
 const Home = lazy(() => import("./pages/Home"));
 const Projects = lazy(() => import("./pages/Projects"));
 const ProjectFDetail = lazy(() => import("./pages/ProjectFDetail"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const Footer = lazy(() => import("./sections/Footer"));
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:slug" element={<ProjectFDetail />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
         <Footer />
       </Suspense>

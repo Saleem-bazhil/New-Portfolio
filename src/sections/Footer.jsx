@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { Link } from "react-router-dom";
 import { socialImgs } from "../constants";
 
 const Footer = memo(() => {
@@ -8,7 +9,9 @@ const Footer = memo(() => {
     <footer className="footer">
       <div className="footer-container">
         <div className="flex flex-col justify-center">
-          <p>Terms & Conditions</p>
+          <Link to="/privacy-policy" className="hover:text-white transition-colors duration-300 w-fit cursor-pointer mx-auto md:mx-0">
+            Terms & Conditions / Privacy Policy
+          </Link>
         </div>
         <div className="socials">
           {socialImgs.map((socialImg, index) => (
