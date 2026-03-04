@@ -25,6 +25,24 @@
     gtag('config', 'AW-17927241640');
   </script>
 
+  <!-- Event snippet for Page view conversion page -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17927241640/11czCJ6nzvEbEKj_r-RC',
+          'value': 1.0,
+          'currency': 'INR',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF7L4DC9Q8"></script>
   <script>
