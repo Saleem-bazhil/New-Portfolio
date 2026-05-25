@@ -175,43 +175,29 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Saleem is a skilled full stack developer with strong expertise in Django and React. He successfully integrated Razorpay and built scalable applications.His work improved performance and overall user experience.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Python Full Stack Developer (Part-Time)",
-    date: "October 2025 - Present",
+    review: "Skiez Technologies India Pvt Ltd",
+    imgPath: "/images/skiez_logo.jpg-removebg-preview.png",
+    logoPath: "/images/skiez-timeline-removebg-fit.png",
+    title: "Part Time Python Full Stack Developer",
+    date: "Part-Time",
     responsibilities: [
-      "Developing full stack applications using Python (Django), React, and MERN stack technologies.",
-      "Integrated Razorpay payment gateway for secure and reliable online transactions.",
-      "Built and integrated RESTful APIs for seamless frontend–backend communication.",
+      "Developed and maintained web applications using Django, Node.js, and frontend technologies.",
+      "Designed REST APIs and optimized database queries for application performance improvements.",
+      "Worked on deployment and production hosting using Linux VPS, Nginx, and SSL.",
     ],
   },
   {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    review: "NoviTech R&D Private Limited",
+    imgPath: "/images/novitech.png",
+    logoPath: "/images/novi_tech_logo-removebg-preview.png",
+    title: "Full Stack & AI Development Intern",
+    date: "Internship",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
-    ],
-  },
-  {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
-    responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Worked on Full Stack Development, Python Programming and Machine Learning concepts.",
+      "Built practice web applications and REST APIs using Python and JavaScript.",
     ],
   },
 ];
-
 const expLogos = [
   {
     name: "logo1",
